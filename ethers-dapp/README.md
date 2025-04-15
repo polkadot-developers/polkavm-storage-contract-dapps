@@ -2,6 +2,8 @@
 
 This is a simple example Next.js application that demonstrates how to interact with the Storage smart contract on Westend Asset Hub using the [ethers.js](https://docs.ethers.org/) library.
 
+For a complete walkthrough and detailed explanations on developing ethers.js dApps on Polkadot smart contracts, refer to the [Create a dApp with Ethers.js](https://papermoonio.github.io/polkadot-mkdocs/tutorials/smart-contracts/launch-your-first-project/create-dapp-ethers-js/) tutorial.
+
 ## Features
 
 - Connect wallet using ethers.js providers
@@ -13,7 +15,8 @@ This is a simple example Next.js application that demonstrates how to interact w
 
 - Node.js (>= 16.x)
 - npm or yarn
-- A Web3 wallet like MetaMask with Westend Asset Hub network configured
+- A Web3 wallet like MetaMask with Westend Asset Hub network configured. Follow the [Connect to Polkadot Hub](https://papermoonio.github.io/polkadot-mkdocs/develop/smart-contracts/connect-to-asset-hub/) guide for detailed setup instructions.
+
 
 ## Getting Started
 
