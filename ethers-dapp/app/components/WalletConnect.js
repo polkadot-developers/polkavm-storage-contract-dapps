@@ -149,7 +149,7 @@ const WalletConnect = ({ onConnect }) => {
               onClick={switchNetwork}
               className="mt-3 w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg transition"
             >
-              Switch to Asset Hub
+              Switch to Passet Hub
             </button>
           )}
         </div>

@@ -1,16 +1,16 @@
 import { JsonRpcProvider } from 'ethers';
 
-export const ASSET_HUB_CONFIG = {
-  name: 'Westend Asset Hub',
-  rpc: 'https://westend-asset-hub-eth-rpc.polkadot.io', // Westend Asset Hub testnet RPC
-  chainId: 420420421, // Westend Asset Hub testnet chainId
-  blockExplorer: 'https://westend-asset-hub.subscan.io/',
+export const PASSET_HUB_CONFIG = {
+  name: 'Passet Hub',
+  rpc: 'https://testnet-passet-hub-eth-rpc.polkadot.io/', // Passet Hub testnet RPC
+  chainId: 420420421, // Passet Hub testnet chainId
+  blockExplorer: 'https://blockscout-passet-hub.parity-testnet.parity.io/',
 };
 
 export const getProvider = () => {
-  return new JsonRpcProvider(ASSET_HUB_CONFIG.rpc, {
-    chainId: ASSET_HUB_CONFIG.chainId,
-    name: ASSET_HUB_CONFIG.name,
+  return new JsonRpcProvider(PASSET_HUB_CONFIG.rpc, {
+    chainId: PASSET_HUB_CONFIG.chainId,
+    name: PASSET_HUB_CONFIG.name,
   });
 };
 
