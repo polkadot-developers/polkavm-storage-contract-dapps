@@ -1,6 +1,6 @@
 # Viem DApp Example
 
-This is a simple example Next.js application that demonstrates how to interact with the Storage smart contract on Westend Asset Hub using the [viem](https://viem.sh/) library.
+This is a simple example Next.js application that demonstrates how to interact with the Storage smart contract on Passet Hub using the [viem](https://viem.sh/) library.
 
 For comprehensive instructions and explanations about building dApps with Viem on Polkadot smart contracts, check out the [Create a dApp with Viem](https://papermoonio.github.io/polkadot-mkdocs/tutorials/smart-contracts/launch-your-first-project/create-dapp-viem/) tutorial.
 
@@ -15,7 +15,7 @@ For comprehensive instructions and explanations about building dApps with Viem o
 
 - Node.js (>= 16.x)
 - npm or yarn
-- A Web3 wallet like MetaMask with Westend Asset Hub network configured. Follow the [Connect to Polkadot Hub](https://papermoonio.github.io/polkadot-mkdocs/develop/smart-contracts/connect-to-asset-hub/) guide for detailed setup instructions.
+- A Web3 wallet like MetaMask with Passet Hub network configured. Follow the [Connect to Polkadot Hub](https://papermoonio.github.io/polkadot-mkdocs/develop/smart-contracts/connect-to-polkadot/) guide for detailed setup instructions.
 
 ## Getting Started
 

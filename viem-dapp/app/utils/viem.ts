@@ -2,28 +2,28 @@ import { createPublicClient, http, createWalletClient, custom } from 'viem'
 import 'viem/window';
 
 
-const transport = http('https://westend-asset-hub-eth-rpc.polkadot.io')
+const transport = http('https://testnet-passet-hub-eth-rpc.polkadot.io')
 
-// Configure the Asset Hub chain
-export const assetHub = {
+// Configure the Passet Hub chain
+export const passetHub = {
   id: 420420421,
-  name: 'Westend Asset Hub',
-  network: 'westend-asset-hub',
+  name: 'Passet Hub',
+  network: 'passet-hub',
   nativeCurrency: {
     decimals: 18,
-    name: 'WND',
-    symbol: 'WND',
+    name: 'PAS',
+    symbol: 'PAS',
   },
   rpcUrls: {
     default: {
-      http: ['https://westend-asset-hub-eth-rpc.polkadot.io'],
+      http: ['https://testnet-passet-hub-eth-rpc.polkadot.io'],
     },
   },
 } as const
 
 // Create a public client for reading data
 export const publicClient = createPublicClient({
-  chain: assetHub,
+  chain: passetHub,
   transport
 })
 
@@ -32,7 +32,7 @@ export const getWalletClient = async () => {
   if (typeof window !== 'undefined' && window.ethereum) {
     const [account] = await window.ethereum.request({ method: 'eth_requestAccounts' });
     return createWalletClient({
-      chain: assetHub,
+      chain: passetHub,
       transport: custom(window.ethereum),
       account,
     });
