@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ASSET_HUB_CONFIG } from '../utils/ethers';
+import { PASSET_HUB_CONFIG } from '../utils/ethers';
 
 const WalletConnect = ({ onConnect }) => {
   const [account, setAccount] = useState(null);
@@ -76,7 +76,7 @@ const WalletConnect = ({ onConnect }) => {
       setChainId(currentChainId);
 
       // Prompt user to switch networks if needed
-      if (currentChainId !== ASSET_HUB_CONFIG.chainId) {
+      if (currentChainId !== PASSET_HUB_CONFIG.chainId) {
         await switchNetwork();
       }
 
@@ -91,7 +91,7 @@ const WalletConnect = ({ onConnect }) => {
     try {
       await window.ethereum.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ chainId: `0x${ASSET_HUB_CONFIG.chainId.toString(16)}` }],
+        params: [{ chainId: `0x${PASSET_HUB_CONFIG.chainId.toString(16)}` }],
       });
     } catch (switchError) {
       // Error 4902 means the chain hasn't been added to MetaMask
@@ -101,10 +101,10 @@ const WalletConnect = ({ onConnect }) => {
             method: 'wallet_addEthereumChain',
             params: [
               {
-                chainId: `0x${ASSET_HUB_CONFIG.chainId.toString(16)}`,
-                chainName: ASSET_HUB_CONFIG.name,
-                rpcUrls: [ASSET_HUB_CONFIG.rpc],
-                blockExplorerUrls: [ASSET_HUB_CONFIG.blockExplorer],
+                chainId: `0x${PASSET_HUB_CONFIG.chainId.toString(16)}`,
+                chainName: PASSET_HUB_CONFIG.name,
+                rpcUrls: [PASSET_HUB_CONFIG.rpc],
+                blockExplorerUrls: [PASSET_HUB_CONFIG.blockExplorer],
               },
             ],
           });
@@ -144,7 +144,7 @@ const WalletConnect = ({ onConnect }) => {
           >
             Disconnect
           </button>
-          {chainId !== ASSET_HUB_CONFIG.chainId && (
+          {chainId !== PASSET_HUB_CONFIG.chainId && (
             <button
               onClick={switchNetwork}
               className="mt-3 w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg transition"
