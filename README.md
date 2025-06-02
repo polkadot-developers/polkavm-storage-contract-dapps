@@ -1,6 +1,6 @@
 # PolkaVM Storage Contract DApps
 
-This repository contains basic dApp examples for interacting with a simple Storage smart contract deployed on Westend Asset Hub. These examples demonstrate how to connect wallets, read contract state, and write to the contract using different popular JavaScript libraries.
+This repository contains basic dApp examples for interacting with a simple Storage smart contract deployed on Passet Hub. These examples demonstrate how to connect wallets, read contract state, and write to the contract using different popular JavaScript libraries.
 
 ## About the Storage Contract
 

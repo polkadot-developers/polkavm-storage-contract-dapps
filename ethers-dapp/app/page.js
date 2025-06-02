@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <section className="min-h-screen bg-white text-black flex flex-col justify-center items-center gap-4 py-10">
       <h1 className="text-2xl font-semibold text-center">
-        Ethers.js dApp - Asset Hub Smart Contracts
+        Ethers.js dApp - Passet Hub Smart Contracts
       </h1>
       <WalletConnect onConnect={handleConnect} />
       <ReadContract />

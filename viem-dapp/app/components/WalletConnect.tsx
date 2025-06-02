@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { assetHub } from "../utils/viem";
+import { passetHub } from "../utils/viem";
 
 interface WalletConnectProps {
   onConnect: (account: string) => void;
@@ -84,7 +84,7 @@ const WalletConnect: React.FC<WalletConnectProps> = ({ onConnect }) => {
       setChainId(currentChainId);
 
       // Prompt user to switch networks if needed
-      if (currentChainId !== assetHub.id) {
+      if (currentChainId !== passetHub.id) {
         await switchNetwork();
       }
 
@@ -100,7 +100,7 @@ const WalletConnect: React.FC<WalletConnectProps> = ({ onConnect }) => {
     try {
       await window.ethereum.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ chainId: `0x${assetHub.id.toString(16)}` }],
+        params: [{ chainId: `0x${passetHub.id.toString(16)}` }],
       });
     } catch (switchError: any) {
       // Error 4902 means the chain hasn't been added to MetaMask
@@ -110,13 +110,13 @@ const WalletConnect: React.FC<WalletConnectProps> = ({ onConnect }) => {
             method: 'wallet_addEthereumChain',
             params: [
               {
-                chainId: `0x${assetHub.id.toString(16)}`,
-                chainName: assetHub.name,
-                rpcUrls: [assetHub.rpcUrls.default.http[0]],
+                chainId: `0x${passetHub.id.toString(16)}`,
+                chainName: passetHub.name,
+                rpcUrls: [passetHub.rpcUrls.default.http[0]],
                 nativeCurrency: {
-                  name: assetHub.nativeCurrency.name,
-                  symbol: assetHub.nativeCurrency.symbol,
-                  decimals: assetHub.nativeCurrency.decimals,
+                  name: passetHub.nativeCurrency.name,
+                  symbol: passetHub.nativeCurrency.symbol,
+                  decimals: passetHub.nativeCurrency.decimals,
                 },
               },
             ],
@@ -157,12 +157,12 @@ const WalletConnect: React.FC<WalletConnectProps> = ({ onConnect }) => {
           >
             Disconnect
           </button>
-          {chainId !== assetHub.id && (
+          {chainId !== passetHub.id && (
             <button
               onClick={switchNetwork}
               className="mt-3 w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg transition"
             >
-              Switch to Asset Hub
+              Switch to Passet Hub
             </button>
           )}
         </div>
