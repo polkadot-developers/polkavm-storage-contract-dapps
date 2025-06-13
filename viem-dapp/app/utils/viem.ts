@@ -6,7 +6,7 @@ const transport = http('https://testnet-passet-hub-eth-rpc.polkadot.io')
 
 // Configure the Passet Hub chain
 export const passetHub = {
-  id: 420420421,
+  id: 420420422,
   name: 'Passet Hub',
   network: 'passet-hub',
   nativeCurrency: {
